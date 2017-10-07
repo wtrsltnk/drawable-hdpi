@@ -1,0 +1,6 @@
+[submodule "stb"]
+	path = stb
+	url = https://github.com/nothings/stb.git
+[submodule "system.io"]
+	path = system.io
+	url = https://github.com/wtrsltnk/system.io.git
