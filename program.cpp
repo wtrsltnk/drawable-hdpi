@@ -57,7 +57,7 @@ int main(int argc, char* argv[])
         auto drawableDir = DirectoryInfo(Path::Combine(directory.FullName(), p.first));
         if (!drawableDir.Exists())
         {
-            mkdir(drawableDir.FullName().c_str());
+            drawableDir.Create();
         }
 
         stbi_uc* outputpixels = new stbi_uc[p.second * p.second * channels];
