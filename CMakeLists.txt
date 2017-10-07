@@ -22,3 +22,9 @@ target_include_directories(drawable-hdpi
     PRIVATE system.io/include
     PRIVATE stb
     )
+
+ADD_CUSTOM_COMMAND(
+    TARGET drawable-hdpi
+    POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:drawable-hdpi> ../small-bins/
+)
